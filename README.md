@@ -1,102 +1,122 @@
-# Twitter-Sentiments-Analysis
 
+<h1><center>Twitter Sentiment Analysis</h1>
 
-Overview:
+![frame_firefox_mac_dark (1)](https://raw.githubusercontent.com/AdityaSuresh013/Twitter-Sentiment-Analysis/main/Images/twittersentiment.PNG)
 
-This project performs Sentiment Analysis on Twitter data, classifying tweets as positive, negative, or neutral. It leverages Natural Language Processing (NLP) techniques and Machine Learning models to analyze sentiments based on textual data.
+A Twitter Sentiment Analysis website made using Flask for a College Project
 
+## Overview
 
-Features:
+This project is a sentiment analysis application for Twitter data, leveraging a dataset from Kaggle. The backend is implemented in Python, utilizing machine learning models for sentiment analysis, while the frontend is built using Flask. The application allows users to input tweets and receive sentiment predictions, categorizing them as positive or negative.
 
-✔ Collects tweets via Twitter API (or uses pre-existing datasets)
+## Table of Contents
 
-✔ Cleans and preprocesses text (removes stopwords, punctuation, etc.)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Data](#data)
+- [Model Training](#model-training)
+- [References](#references)
+- [License](#license)
+- [Author](#author)
 
-✔ Implements NLP techniques (TF-IDF, Word Embeddings, etc.)
+## Features
 
-✔ Uses multiple Machine Learning models (e.g., Naïve Bayes, Logistic Regression, Random Forest)
+- Web interface built with Flask for inputting a example tweet.
+- Classify tweets into positive or negative categories.
+- Visualization of prediction results.
 
-✔ Visualizes sentiment distribution and word frequencies
+## Technologies Used
 
+- **Backend**: Python, Flask
+- **Frontend**: HTML, CSS, JavaScript
+- **Machine Learning**: scikit-learn, Pandas, NumPy, Joblib
+- **Visualization**: Matplotlib, Plotly
 
+## Installation
 
-Technologies Used:
+Follow these steps to set up the project locally:
 
+1. **Clone the repository:**
 
-Programming Language: Python
+   ```bash
+   git clone https://github.com/AdityaSuresh013/Twitter-Sentiment-Analysis.git
+   cd Twitter-Sentiment-Analysis
+   ```
 
-Libraries: Pandas, NumPy, Scikit-learn, NLTK, TextBlob, Matplotlib, Seaborn
+2. **Create a virtual environment:**
 
-Machine Learning Models: Naïve Bayes, Logistic Regression, Random Forest
+   ```bash
+   python -m venv venv
+   ```
 
-Data Visualization: Matplotlib, Seaborn
+3. **Activate the virtual environment:**
 
-Notebook: Jupyter Notebook
+   - On Windows:
 
+     ```bash
+     venv\Scripts\activate
+     ```
 
-Installation & Setup:
+   - On Linux:
 
-Step 1: Clone the Repository
+     ```bash
+     source venv/bin/activate
+     ```
 
-git clone https://github.com/your-username/Twitter-Sentiments-Analysis.git
+4. **Install the required packages:**
 
-cd Twitter-Sentiments-Analysis
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Step 2: Install Dependencies
+## Usage
 
-pip install -r requirements.txt
+1. **Run the Flask application:**
 
-Step 3: Run the Jupyter Notebook-jupyter notebook
+   ```bash
+   python app.py
+   ```
 
-Open sentiment_analysis.ipynb and run the cells.
+2. **Open browser and navigate to:**
 
+   ```
+   http://127.0.0.1:5000/
+   ```
 
-Dataset:
+3. **Enter a sample tweet to get a predicted sentiment.**
 
-You can use a pre-collected Twitter dataset from Kaggle or scrape tweets using the Twitter API.
+## Data
 
-Example Columns in Dataset:
+The dataset used for training the model is sourced from [Kaggle]([https://www.kaggle.com/amitabhajoy/bengaluru-house-price-data](https://www.kaggle.com/datasets/kazanova/sentiment140)), which contains 1.6 million labeled tweets. It has the following columns:
 
-tweet_id: Unique ID for the tweet
+- target: the polarity of the tweet (0 = negative, 2 = neutral, 4 = positive)
+- ids: The id of the tweet
+- date: the date of the tweet
+- flag: The query. If there is no query, then this value is NO_QUERY.
+- user: the user that tweeted
+- text: the text of the tweet
 
-text: The content of the tweet
+## Model Training
 
-sentiment: Label (Positive, Negative, Neutral)
+The machine learning model is trained using the dataset. Key steps involved:
 
+1. **Data Preprocessing**: Cleaning and transforming the dataset to make it suitable for training.
+2. **Feature Selection**: Selecting the most relevant features.
+3. **Data Visualization**: Visualizing the cleaned dataset using Matplotlib
+4. **Model Selection**: Implementing various regression models (Linear Regression, Lasso, Decision Trees) to find the best performing model.
+5. **Evaluation**: Evaluating the model's performance using metrics like K Fold Cross, etc.
 
-Model Performance:
+##  References
 
-Model	Accuracy:
+- [Sentiment Analysis on tweets with LSTM](https://www.analyticsvidhya.com/blog/2021/12/sentiment-analysis-on-tweets-with-lstm-for-beginners/) - A guide on implementing LSTM for sentiment analysis on tweet data.
 
-Naïve Bayes	85%
+##  License
 
-Logistic Regression	88%
+[MIT](https://choosealicense.com/licenses/mit/) © [Ambit PM](https://github.com/AdityaSuresh013)
+- This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Random Forest	90%
+## Author
 
-
-Usage:
-
-Social Media Monitoring: Understand public sentiment about topics.
-
-Brand Analysis: Track customer opinions about products/services.
-
-Political Sentiment: Analyze people's opinions on political events.
-
-
-Future Improvements:
-
-🚀 Fine-tune models using Deep Learning (LSTMs, BERT)
-🚀 Deploy as a web app using Flask or Streamlit
-🚀 Integrate real-time Twitter API for live sentiment tracking
-
-
-Contributing:
-
-Pull requests are welcome! Feel free to fork the repo and submit a PR.
-
-
-License:
-
-This project is licensed under the MIT License.
-
+- [Ambit PM](https://github.com/AdityaSuresh013)
