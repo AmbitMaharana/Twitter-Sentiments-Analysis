@@ -119,4 +119,4 @@ The machine learning model is trained using the dataset. Key steps involved:
 
 ## Author
 
-- [Ambit PM](https://github.com/AdityaSuresh013)
+- [Ambit PM](https://github.com/AmbitMaharana)
